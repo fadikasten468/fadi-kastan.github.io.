@@ -1,1 +1,130 @@
 
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fadi Kastan | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #0b0d12;
+      color: #f4f5fa;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: #a5a6ff; text-decoration: none; }
+    .container { width: min(1000px, 90%); margin: auto; }
+    header { border-bottom: 1px solid #292e3c; padding: 20px 0; }
+    nav { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    nav strong { letter-spacing: 1px; }
+    nav div { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero { padding: 100px 0 80px; }
+    .eyebrow { color: #a5a6ff; font-size: 13px; letter-spacing: 2px; }
+    h1 { font-size: clamp(42px, 8vw, 72px); line-height: 1.1; margin: 20px 0; }
+    h2 { font-size: 32px; }
+    p { color: #aab0c0; }
+    .intro { max-width: 650px; font-size: 19px; }
+    .button { display: inline-block; margin: 12px 10px 0 0; padding: 11px 17px; border: 1px solid #a5a6ff; border-radius: 8px; }
+    .primary { background: #a5a6ff; color: #11121b; }
+    section { padding: 45px 0; scroll-margin-top: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .card { background: #131722; border: 1px solid #292e3c; padding: 22px; border-radius: 13px; }
+    .tag { display: inline-block; background: #202436; padding: 6px 11px; border-radius: 7px; margin: 5px; font-size: 14px; }
+    .status { color: #c8c8ff; font-size: 12px; }
+    footer { border-top: 1px solid #292e3c; padding: 25px 0; margin-top: 30px; }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="container">
+    <strong>FADI KASTAN</strong>
+    <div>
+      <a href="#om">Om mig</a>
+      <a href="#kunskaper">Kunskaper</a>
+      <a href="#projekt">Projekt</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="container hero">
+    <div class="eyebrow">DATA MANAGER · SÖKER LIA</div>
+    <h1>Hej, jag heter<br>Fadi Kastan.</h1>
+    <p class="intro">Jag studerar till Data Manager på TUC Yrkeshögskola i Bromma. Jag är intresserad av databaser, programmering och IT-säkerhet och vill fortsätta utvecklas inom IT.</p>
+    <a class="button primary" href="#projekt">Se mina projekt ↓</a>
+    <a class="button" href="#kontakt">Kontakta mig</a>
+  </div>
+
+  <section id="om">
+    <div class="container">
+      <div class="eyebrow">BAKGRUND</div>
+      <h2>Om mig</h2>
+      <p>Jag studerar Data Manager på TUC Yrkeshögskola i Bromma och har tidigare studerat informationsteknik på NTI Gymnasiet i Södertälje. Under min praktik på Power fick jag erfarenhet av IT-relaterade uppgifter, kundservice och teknisk support.</p>
+      <p>Jag är ansvarstagande, engagerad och nyfiken på teknik. Jag söker en LIA-plats där jag kan lära mig mer och bidra till ett IT-team.</p>
+    </div>
+  </section>
+
+  <section id="kunskaper">
+    <div class="container">
+      <div class="eyebrow">UTVECKLING</div>
+      <h2>Kunskaper och intressen</h2>
+      <p>Områden jag studerar och vill utvecklas vidare inom:</p>
+      <span class="tag">SQL</span>
+      <span class="tag">Python</span>
+      <span class="tag">Databaser</span>
+      <span class="tag">Datasäkerhet</span>
+      <span class="tag">Cybersäkerhet</span>
+      <span class="tag">IT-support</span>
+    </div>
+  </section>
+
+  <section id="projekt">
+    <div class="container">
+      <div class="eyebrow">PRAKTISKT LÄRANDE</div>
+      <h2>Mina projekt</h2>
+      <p>Här samlar jag egna övningar och projekt från min utbildning.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Biblioteksdatabas med SQL</h3>
+          <div class="status">PLANERAT</div>
+          <p>En databas med böcker och låntagare för att träna på tabeller och SQL-frågor.</p>
+        </article>
+        <article class="card">
+          <h3>Utgiftskalkylator med Python</h3>
+          <div class="status">PLANERAT</div>
+          <p>Ett enkelt program som registrerar utgifter och räknar ut totalsummor.</p>
+        </article>
+        <article class="card">
+          <h3>Lösenordskontroll</h3>
+          <div class="status">PLANERAT</div>
+          <p>Ett lokalt övningsverktyg som bedömer lösenordsstyrka utan att spara lösenord.</p>
+        </article>
+        <article class="card">
+          <h3>Min portfolio</h3>
+          <div class="status">PÅGÅENDE</div>
+          <p>Den här webbplatsen, byggd med HTML och CSS.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <div class="eyebrow">KONTAKT</div>
+      <h2>Letar efter LIA</h2>
+      <p>Jag söker en LIA-plats där jag kan utvecklas inom Data Management, databaser och IT.</p>
+      <a class="button primary" href="mailto:Kastanfadi@gmail.com?subject=LIA%20-%20Fadi%20Kastan">Skicka e-post</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Fadi Kastan · HTML och CSS</div>
+</footer>
+</body>
+</html>
+
