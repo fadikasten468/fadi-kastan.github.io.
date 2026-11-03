@@ -7,8 +7,13 @@
   <title>Fadi Kastan | Portfolio</title>
 
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -21,6 +26,10 @@
     a {
       color: #a5a6ff;
       text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffffff;
     }
 
     .container {
@@ -40,7 +49,9 @@
       flex-wrap: wrap;
     }
 
-    nav strong { letter-spacing: 1px; }
+    nav strong {
+      letter-spacing: 1px;
+    }
 
     nav div {
       display: flex;
@@ -48,7 +59,9 @@
       gap: 16px;
     }
 
-    .hero { padding: 100px 0 80px; }
+    .hero {
+      padding: 100px 0 80px;
+    }
 
     .eyebrow {
       color: #a5a6ff;
@@ -62,9 +75,17 @@
       margin: 20px 0;
     }
 
-    h2 { font-size: 32px; }
+    h2 {
+      font-size: 32px;
+    }
 
-    p { color: #aab0c0; }
+    h3 {
+      color: #f4f5fa;
+    }
+
+    p {
+      color: #aab0c0;
+    }
 
     .intro {
       max-width: 650px;
@@ -77,10 +98,20 @@
       padding: 11px 17px;
       border: 1px solid #a5a6ff;
       border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #25283b;
     }
 
     .primary {
       background: #a5a6ff;
+      color: #11121b;
+    }
+
+    .primary:hover {
+      background: #c2c3ff;
       color: #11121b;
     }
 
@@ -114,6 +145,7 @@
     .status {
       color: #c8c8ff;
       font-size: 12px;
+      letter-spacing: 1px;
     }
 
     /* Profilbild – hela bilden syns */
@@ -128,6 +160,39 @@
       display: block;
     }
 
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .info-list li {
+      background: #131722;
+      border: 1px solid #292e3c;
+      border-radius: 10px;
+      padding: 15px 18px;
+      margin-bottom: 12px;
+      color: #aab0c0;
+    }
+
+    .info-list strong {
+      color: #f4f5fa;
+    }
+
+    .lia-box {
+      background: #131722;
+      border: 1px solid #a5a6ff;
+      border-radius: 13px;
+      padding: 25px;
+      max-width: 700px;
+    }
+
+    .lia-date {
+      color: #c8c8ff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
     footer {
       border-top: 1px solid #292e3c;
       padding: 25px 0;
@@ -135,7 +200,9 @@
     }
 
     @media (max-width: 600px) {
-      .hero { padding: 65px 0 50px; }
+      .hero {
+        padding: 65px 0 50px;
+      }
 
       nav {
         flex-direction: column;
@@ -143,6 +210,14 @@
 
       nav div {
         gap: 12px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      .lia-date {
+        font-size: 19px;
       }
     }
   </style>
@@ -156,7 +231,9 @@
 
     <div>
       <a href="#om">Om mig</a>
+      <a href="#utbildning">Utbildning</a>
       <a href="#kunskaper">Kunskaper</a>
+      <a href="#sprak">Språk</a>
       <a href="#projekt">Projekt</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -181,7 +258,9 @@
     <p class="intro">
       Jag studerar till Data Manager på TUC Yrkeshögskola i Bromma.
       Jag är intresserad av databaser, programmering och IT-säkerhet
-      och vill fortsätta utvecklas inom IT.
+      och vill fortsätta utvecklas inom IT. Jag söker nu en LIA-plats
+      där jag får möjlighet att använda mina kunskaper, lära mig mer
+      och bidra till ett engagerat IT-team.
     </p>
 
     <a class="button primary" href="#projekt">
@@ -192,11 +271,60 @@
       Kontakta mig
     </a>
 
+    <a
+      class="button"
+      href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn-profil →
+    </a>
+
+    <a
+      class="button"
+      href="https://github.com/fadikasten468"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub-profil →
+    </a>
+
     <a class="button" href="Fadi%20Kastan%20CV%2026.pdf" download>
       Ladda ner mitt CV ↓
     </a>
 
   </div>
+
+  <!-- LIA-period -->
+  <section id="lia">
+    <div class="container">
+
+      <div class="eyebrow">PRAKTIK</div>
+      <h2>Jag söker LIA</h2>
+
+      <div class="lia-box">
+        <p>
+          Jag söker en LIA-plats inom Data Management, databaser
+          eller IT där jag kan utveckla mina praktiska kunskaper
+          och få erfarenhet av att arbeta i en professionell miljö.
+        </p>
+
+        <p>
+          Jag är motiverad, ansvarstagande och nyfiken på att lära mig
+          nya tekniker och arbetsmetoder.
+        </p>
+
+        <div class="lia-date">
+          7 december 2026 – 23 april 2027
+        </div>
+
+        <p>
+          Tillgänglig för LIA under hela denna period.
+        </p>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Om mig -->
   <section id="om">
@@ -215,9 +343,53 @@
 
       <p>
         Jag är ansvarstagande, engagerad och nyfiken på teknik.
-        Jag söker en LIA-plats där jag kan lära mig mer och
-        bidra till ett IT-team.
+        Jag tycker om att lösa problem, utveckla mina kunskaper
+        och arbeta med tekniska lösningar. Jag söker en LIA-plats
+        där jag kan lära mig mer och bidra till ett IT-team.
       </p>
+
+    </div>
+  </section>
+
+  <!-- Utbildning -->
+  <section id="utbildning">
+    <div class="container">
+
+      <div class="eyebrow">MIN BAKGRUND</div>
+      <h2>Utbildning</h2>
+
+      <div class="grid">
+
+        <article class="card">
+          <div class="status">PÅGÅENDE UTBILDNING</div>
+          <h3>Data Manager</h3>
+
+          <p>
+            <strong>TUC Yrkeshögskola</strong><br>
+            Bromma
+          </p>
+
+          <p>
+            Utbildning med inriktning mot Data Management,
+            databaser och IT.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="status">TIDIGARE UTBILDNING</div>
+          <h3>Informationsteknik</h3>
+
+          <p>
+            <strong>NTI Gymnasiet</strong><br>
+            Södertälje
+          </p>
+
+          <p>
+            Gymnasieutbildning med inriktning mot informationsteknik.
+          </p>
+        </article>
+
+      </div>
 
     </div>
   </section>
@@ -229,7 +401,9 @@
       <div class="eyebrow">UTVECKLING</div>
       <h2>Kunskaper och intressen</h2>
 
-      <p>Områden jag studerar och vill utvecklas vidare inom:</p>
+      <p>
+        Områden jag studerar och vill utvecklas vidare inom:
+      </p>
 
       <span class="tag">SQL</span>
       <span class="tag">Python</span>
@@ -237,6 +411,36 @@
       <span class="tag">Datasäkerhet</span>
       <span class="tag">Cybersäkerhet</span>
       <span class="tag">IT-support</span>
+      <span class="tag">Dataanalys</span>
+      <span class="tag">ETL</span>
+      <span class="tag">SQLite</span>
+
+    </div>
+  </section>
+
+  <!-- Språk -->
+  <section id="sprak">
+    <div class="container">
+
+      <div class="eyebrow">KOMMUNIKATION</div>
+      <h2>Språkkunskaper</h2>
+
+      <ul class="info-list">
+        <li>
+          <strong>Svenska</strong><br>
+          Mycket goda kunskaper
+        </li>
+
+        <li>
+          <strong>Engelska</strong><br>
+          Mycket goda kunskaper
+        </li>
+
+        <li>
+          <strong>Arabiska</strong><br>
+          Modersmål
+        </li>
+      </ul>
 
     </div>
   </section>
@@ -316,11 +520,13 @@
     <div class="container">
 
       <div class="eyebrow">KONTAKT</div>
-      <h2>Letar efter LIA</h2>
+      <h2>Kontakta mig</h2>
 
       <p>
-        Jag söker en LIA-plats där jag kan utvecklas inom
-        Data Management, databaser och IT.
+        Är ditt företag intresserat av en LIA-student inom
+        Data Management, databaser eller IT? Kontakta mig gärna.
+        Jag ser fram emot möjligheten att presentera mig och
+        berätta mer om vad jag kan bidra med.
       </p>
 
       <p>
@@ -348,6 +554,15 @@
 
       <a class="button" href="tel:0768110716">
         Ring mig
+      </a>
+
+      <a
+        class="button"
+        href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn →
       </a>
 
     </div>
