@@ -8,6 +8,8 @@
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -16,208 +18,202 @@
     }
 
     body {
-      margin: 0;
-      background: #0b0d12;
-      color: #f4f5fa;
       font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f4f4f8;
       line-height: 1.7;
     }
 
     a {
-      color: #a5a6ff;
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      color: #ffffff;
-    }
-
     .container {
-      width: min(1000px, 90%);
+      width: 90%;
+      max-width: 1050px;
       margin: auto;
     }
 
     header {
-      border-bottom: 1px solid #292e3c;
-      padding: 20px 0;
+      padding: 22px 0;
+      border-bottom: 1px solid #252b43;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
+      align-items: center;
       flex-wrap: wrap;
+      gap: 15px;
     }
 
-    nav strong {
-      letter-spacing: 1px;
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #a5a6ff;
     }
 
-    nav div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+    nav a {
+      margin-left: 18px;
+      color: #d7d8e5;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #a5a6ff;
+    }
+
+    section {
+      padding: 65px 0;
     }
 
     .hero {
-      padding: 100px 0 80px;
+      text-align: center;
+      padding: 75px 0;
     }
 
-    .eyebrow {
+    /* Ny rund profilbild */
+    .profile-image {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 4px solid #a5a6ff;
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
       color: #a5a6ff;
-      font-size: 13px;
-      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 18px;
     }
 
-    h1 {
-      font-size: clamp(42px, 8vw, 72px);
-      line-height: 1.1;
-      margin: 20px 0;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    h3 {
-      color: #f4f5fa;
-    }
-
-    p {
-      color: #aab0c0;
-    }
-
-    .intro {
+    .hero p {
       max-width: 650px;
-      font-size: 19px;
+      margin: 0 auto 25px;
+      color: #c2c5d6;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
     }
 
     .button {
       display: inline-block;
-      margin: 12px 10px 0 0;
-      padding: 11px 17px;
-      border: 1px solid #a5a6ff;
+      padding: 11px 19px;
       border-radius: 8px;
+      background: #7778e8;
+      color: white;
+      font-weight: bold;
       transition: 0.2s;
     }
 
     .button:hover {
-      background: #25283b;
+      background: #9293ff;
+      transform: translateY(-2px);
     }
 
-    .primary {
-      background: #a5a6ff;
-      color: #11121b;
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #7778e8;
     }
 
-    .primary:hover {
-      background: #c2c3ff;
-      color: #11121b;
-    }
-
-    section {
-      padding: 45px 0;
-      scroll-margin-top: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+    h2.section-title {
+      font-size: 29px;
+      color: #a5a6ff;
+      margin-bottom: 25px;
     }
 
     .card {
-      background: #131722;
-      border: 1px solid #292e3c;
-      padding: 22px;
+      background: #151b30;
+      border: 1px solid #282f4a;
       border-radius: 13px;
+      padding: 25px;
+      margin-bottom: 18px;
     }
 
-    .tag {
-      display: inline-block;
-      background: #202436;
-      padding: 6px 11px;
-      border-radius: 7px;
-      margin: 5px;
+    .card h3 {
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #c2c5d6;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #202744;
+      border: 1px solid #3b4268;
+      color: #dfe0ff;
+      padding: 9px 16px;
+      border-radius: 20px;
       font-size: 14px;
     }
 
-    .status {
-      color: #c8c8ff;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    /* Profilbild – hela bilden syns */
-    .profile-image {
-      width: 220px;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      border-radius: 12px;
-      border: 3px solid #a5a6ff;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .info-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    .info-list li {
-      background: #131722;
-      border: 1px solid #292e3c;
-      border-radius: 10px;
-      padding: 15px 18px;
-      margin-bottom: 12px;
-      color: #aab0c0;
-    }
-
-    .info-list strong {
-      color: #f4f5fa;
-    }
-
-    .lia-box {
-      background: #131722;
-      border: 1px solid #a5a6ff;
-      border-radius: 13px;
-      padding: 25px;
-      max-width: 700px;
-    }
-
-    .lia-date {
-      color: #c8c8ff;
-      font-size: 22px;
+    .project-link {
+      display: inline-block;
+      color: #a5a6ff;
+      margin-top: 12px;
       font-weight: bold;
     }
 
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .contact-links a {
+      display: block;
+      color: #a5a6ff;
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
     footer {
-      border-top: 1px solid #292e3c;
+      text-align: center;
       padding: 25px 0;
-      margin-top: 30px;
+      border-top: 1px solid #252b43;
+      color: #9298b0;
+      font-size: 13px;
     }
 
     @media (max-width: 600px) {
-      .hero {
-        padding: 65px 0 50px;
+      .hero h1 {
+        font-size: 32px;
       }
 
       nav {
-        flex-direction: column;
+        justify-content: center;
       }
 
-      nav div {
-        gap: 12px;
+      nav a {
+        margin: 0 7px;
       }
 
-      h2 {
-        font-size: 27px;
+      section {
+        padding: 45px 0;
       }
 
-      .lia-date {
-        font-size: 19px;
+      .profile-image {
+        width: 165px;
+        height: 165px;
       }
     }
   </style>
@@ -225,354 +221,211 @@
 
 <body>
 
-<header>
-  <nav class="container">
-    <strong>FADI KASTAN</strong>
-
-    <div>
-      <a href="#om">Om mig</a>
-      <a href="#utbildning">Utbildning</a>
-      <a href="#kunskaper">Kunskaper</a>
-      <a href="#sprak">Språk</a>
-      <a href="#projekt">Projekt</a>
-      <a href="#kontakt">Kontakt</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-  <!-- Startsida -->
-  <div class="container hero">
-
-    <div class="eyebrow">DATA MANAGER · SÖKER LIA</div>
-
-    <img
-      src="profilbild.jpg..png"
-      alt="Profilbild på Fadi"
-      class="profile-image"
-    >
-
-    <h1>Hej, jag heter<br>Fadi Kastan.</h1>
-
-    <p class="intro">
-      Jag studerar till Data Manager på TUC Yrkeshögskola i Bromma.
-      Jag är intresserad av databaser, programmering och IT-säkerhet
-      och vill fortsätta utvecklas inom IT. Jag söker nu en LIA-plats
-      där jag får möjlighet att använda mina kunskaper, lära mig mer
-      och bidra till ett engagerat IT-team.
-    </p>
-
-    <a class="button primary" href="#projekt">
-      Se mina projekt ↓
-    </a>
-
-    <a class="button" href="#kontakt">
-      Kontakta mig
-    </a>
-
-    <a
-      class="button"
-      href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      LinkedIn-profil →
-    </a>
-
-    <a
-      class="button"
-      href="https://github.com/fadikasten468"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      GitHub-profil →
-    </a>
-
-    <a class="button" href="Fadi%20Kastan%20CV%2026.pdf" download>
-      Ladda ner mitt CV ↓
-    </a>
-
-  </div>
-
-  <!-- LIA-period -->
-  <section id="lia">
+  <header>
     <div class="container">
+      <nav>
+        <div class="logo">Fadi Kastan</div>
+        <div>
+          <a href="#about">Om mig</a>
+          <a href="#education">Utbildning</a>
+          <a href="#skills">Kompetenser</a>
+          <a href="#projects">Projekt</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-      <div class="eyebrow">PRAKTIK</div>
-      <h2>Jag söker LIA</h2>
+  <main>
 
-      <div class="lia-box">
+    <section class="hero">
+      <div class="container">
+
+        <img
+          src="min-profilbild.jpg"
+          alt="Profilbild på Fadi"
+          class="profile-image"
+        >
+
+        <h1>Hej, jag heter Fadi Kastan</h1>
+        <h2>DATA MANAGER · SÖKER LIA</h2>
+
         <p>
-          Jag söker en LIA-plats inom Data Management, databaser
-          eller IT där jag kan utveckla mina praktiska kunskaper
-          och få erfarenhet av att arbeta i en professionell miljö.
+          Jag studerar Data Manager på TUC Yrkeshögskola
+          och är intresserad av databaser, SQL, Python,
+          dataanalys och datasäkerhet. Jag söker en
+          LIA-plats där jag kan utvecklas och använda
+          mina kunskaper i praktiken.
         </p>
 
-        <p>
-          Jag är motiverad, ansvarstagande och nyfiken på att lära mig
-          nya tekniker och arbetsmetoder.
-        </p>
-
-        <div class="lia-date">
-          7 december 2026 – 23 april 2027
+        <div class="buttons">
+          <a href="#projects" class="button">Mina projekt</a>
+          <a href="#contact" class="button secondary">Kontakta mig</a>
+          <a href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
+             target="_blank" rel="noopener noreferrer"
+             class="button secondary">LinkedIn</a>
+          <a href="https://github.com/fadikasten468"
+             target="_blank" rel="noopener noreferrer"
+             class="button secondary">GitHub</a>
+          <a href="Fadi%20Kastan%20CV%2026.pdf"
+             download class="button secondary">Ladda ner mitt CV ↓</a>
         </div>
 
-        <p>
-          Tillgänglig för LIA under hela denna period.
-        </p>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="lia">
+      <div class="container">
+        <h2 class="section-title">LIA-period</h2>
+        <div class="card">
+          <h3>Jag söker LIA-plats</h3>
+          <p>
+            Jag är tillgänglig för LIA mellan
+            <strong>7 december 2026 – 23 april 2027</strong>.
+            Jag ser fram emot att få utvecklas,
+            lära mig nya saker och bidra till ett företag.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Om mig -->
-  <section id="om">
-    <div class="container">
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Om mig</h2>
+        <div class="card">
+          <p>
+            Jag studerar Data Manager på TUC Yrkeshögskola
+            i Bromma. Jag har ett stort intresse för IT,
+            data och teknik och tycker om att lösa problem
+            och lära mig nya saker.
+          </p>
+          <br>
+          <p>
+            Jag har tidigare erfarenhet från Power där jag
+            arbetade med IT-relaterade arbetsuppgifter,
+            kundservice och teknisk support. Erfarenheten
+            har utvecklat min förmåga att samarbeta,
+            kommunicera och hjälpa människor.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <div class="eyebrow">BAKGRUND</div>
-      <h2>Om mig</h2>
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Utbildning</h2>
 
-      <p>
-        Jag studerar Data Manager på TUC Yrkeshögskola i Bromma
-        och har tidigare studerat El- och energiprogrammet med
-        inriktning dator- och kommunikationsteknik på NTI Gymnasiet
-        i Södertälje. Under min praktik på Power fick jag erfarenhet
-        av IT-relaterade uppgifter, kundservice och teknisk support.
-      </p>
-
-      <p>
-        Jag är ansvarstagande, engagerad och nyfiken på teknik.
-        Jag tycker om att lösa problem, utveckla mina kunskaper
-        och arbeta med tekniska lösningar. Jag söker en LIA-plats
-        där jag kan lära mig mer och bidra till ett IT-team.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- Utbildning -->
-  <section id="utbildning">
-    <div class="container">
-
-      <div class="eyebrow">MIN BAKGRUND</div>
-      <h2>Utbildning</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="status">PÅGÅENDE UTBILDNING</div>
+        <div class="card">
           <h3>Data Manager</h3>
+          <p>TUC Yrkeshögskola, Bromma</p>
+          <p>Pågående utbildning</p>
+        </div>
 
-          <p>
-            <strong>TUC Yrkeshögskola</strong><br>
-            Bromma
-          </p>
-
-          <p>
-            Utbildning med inriktning mot Data Management,
-            databaser och IT.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="status">TIDIGARE UTBILDNING</div>
-          <h3>El- och energiprogrammet</h3>
-
-          <p>
-            <strong>NTI Gymnasiet</strong><br>
-            Södertälje
-          </p>
-
-          <p>
-            Inriktning mot dator- och kommunikationsteknik.
-          </p>
-        </article>
+        <div class="card">
+          <h3>El- och energiprogrammet med datainriktning</h3>
+          <p>NTI Gymnasiet, Södertälje</p>
+          <p>Inriktning mot dator- och kommunikationsteknik.</p>
+        </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Kompetenser</h2>
 
-  <!-- Kunskaper -->
-  <section id="kunskaper">
-    <div class="container">
+        <div class="skills">
+          <span class="skill">SQL</span>
+          <span class="skill">Python</span>
+          <span class="skill">Databaser</span>
+          <span class="skill">Datasäkerhet</span>
+          <span class="skill">Dataanalys</span>
+          <span class="skill">ETL</span>
+          <span class="skill">SQLite</span>
+        </div>
+      </div>
+    </section>
 
-      <div class="eyebrow">UTVECKLING</div>
-      <h2>Kunskaper och intressen</h2>
+    <section id="languages">
+      <div class="container">
+        <h2 class="section-title">Språk</h2>
 
-      <p>
-        Områden jag studerar och vill utvecklas vidare inom:
-      </p>
+        <div class="card">
+          <p><strong>Svenska:</strong> Mycket goda kunskaper</p>
+          <p><strong>Engelska:</strong> Mycket goda kunskaper</p>
+          <p><strong>Arabiska:</strong> Modersmål</p>
+        </div>
+      </div>
+    </section>
 
-      <span class="tag">SQL</span>
-      <span class="tag">Python</span>
-      <span class="tag">Databaser</span>
-      <span class="tag">Datasäkerhet</span>
-      <span class="tag">Dataanalys</span>
-      <span class="tag">ETL</span>
-      <span class="tag">SQLite</span>
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Mina projekt</h2>
 
-    </div>
-  </section>
-
-  <!-- Språk -->
-  <section id="sprak">
-    <div class="container">
-
-      <div class="eyebrow">KOMMUNIKATION</div>
-      <h2>Språkkunskaper</h2>
-
-      <ul class="info-list">
-        <li>
-          <strong>Svenska</strong><br>
-          Mycket goda kunskaper
-        </li>
-
-        <li>
-          <strong>Engelska</strong><br>
-          Mycket goda kunskaper
-        </li>
-
-        <li>
-          <strong>Arabiska</strong><br>
-          Modersmål
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-  <!-- Projekt -->
-  <section id="projekt">
-    <div class="container">
-
-      <div class="eyebrow">PRAKTISKT LÄRANDE</div>
-      <h2>Mina projekt</h2>
-
-      <p>
-        Här samlar jag egna övningar och projekt från min utbildning.
-      </p>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Student Depression – Data Analysis</h3>
-
-          <div class="status">GENOMFÖRT PROJEKT</div>
-
+        <div class="card">
+          <h3>Student Depression</h3>
           <p>
-            Ett dataanalysprojekt där jag undersökte samband mellan
-            depression bland universitetsstudenter och faktorer som
-            akademisk press, sömn och ekonomisk stress.
-            Jag byggde en backend med Node.js och Express,
-            använde SQLite och SQL samt skapade API:er
-            för att hämta och presentera statistik.
+            Ett projekt med fokus på data och analys
+            kopplat till student depression.
           </p>
-
-          <p>
-            <strong>Tekniker:</strong> JavaScript, Node.js,
-            Express, SQL, SQLite, HTML och CSS.
-          </p>
-
-          <a
-            href="https://github.com/fadikasten468/student-depression"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="project-link"
+             href="https://github.com/fadikasten468/student-depression"
+             target="_blank" rel="noopener noreferrer">
             Se projektet på GitHub →
           </a>
-        </article>
+        </div>
 
-        <article class="card">
-          <h3>Matkassen – Dataanalys och ETL</h3>
-
-          <div class="status">GENOMFÖRT PROJEKT</div>
-
+        <div class="card">
+          <h3>Matkassen-projekt</h3>
           <p>
-            Ett projekt där jag arbetade med att rensa,
-            strukturera och bearbeta data från en matkassetjänst.
-            Projektet innehåller datatransformationer,
-            en SQLite-databas och visualiseringar av data.
+            Ett projekt där jag arbetat med
+            programmering och problemlösning.
           </p>
-
-          <p>
-            <strong>Tekniker:</strong> ETL, SQLite och dataanalys.
-          </p>
-
-          <a
-            href="https://github.com/fadikasten468/matkassen-projekt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="project-link"
+             href="https://github.com/fadikasten468/matkassen-projekt"
+             target="_blank" rel="noopener noreferrer">
             Se projektet på GitHub →
           </a>
-        </article>
+        </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Kontakt -->
-  <section id="kontakt">
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Kontakt</h2>
+
+        <div class="card contact-links">
+          <p>Du är välkommen att kontakta mig!</p>
+
+          <a href="mailto:Kastanfadi@gmail.com">
+            E-post: Kastanfadi@gmail.com
+          </a>
+
+          <a href="tel:0768110716">
+            Telefon: 076 811 0716
+          </a>
+
+          <a href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn →
+          </a>
+
+          <a href="https://github.com/fadikasten468"
+             target="_blank" rel="noopener noreferrer">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="container">
-
-      <div class="eyebrow">KONTAKT</div>
-      <h2>Kontakta mig</h2>
-
-      <p>
-        Är ditt företag intresserat av en LIA-student inom
-        Data Management, databaser eller IT? Kontakta mig gärna.
-        Jag ser fram emot möjligheten att presentera mig och
-        berätta mer om vad jag kan bidra med.
-      </p>
-
-      <p>
-        <strong>E-post:</strong>
-        <a href="mailto:Kastanfadi@gmail.com">
-          Kastanfadi@gmail.com
-        </a>
-      </p>
-
-      <p>
-        <strong>Telefon:</strong>
-        <a href="tel:0768110716">
-          076 811 0716
-        </a>
-      </p>
-
-      <a
-        class="button primary"
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=Kastanfadi%40gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Skicka e-post
-      </a>
-
-      <a class="button" href="tel:0768110716">
-        Ring mig
-      </a>
-
-      <a
-        class="button"
-        href="https://www.linkedin.com/in/fadi-kastan-8187273a9/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn →
-      </a>
-
+      © 2026 Fadi Kastan. Alla rättigheter förbehållna.
     </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © 2026 Fadi Kastan · HTML och CSS
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
